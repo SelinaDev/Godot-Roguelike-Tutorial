@@ -1,0 +1,4 @@
+res://src/Game/game.tscn
+res://assets/definitions/entities/actors/entity_definition_player.tres
+res://assets/definitions/tiles/tile_definition_floor.tres
+res://assets/definitions/tiles/tile_definition_wall.tres
