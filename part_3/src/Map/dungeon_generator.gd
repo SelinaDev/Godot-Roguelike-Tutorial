@@ -35,7 +35,7 @@ func generate_dungeon(player: Entity) -> MapData:
 		var has_intersections := false
 		for room in rooms:
 			# Rect2i.intersects() checks for overlapping points. In order to allow bordering rooms one room is shrunk.
-			if room.intersects(new_room.grow(-1)):
+			if room.intersects(new_room):
 				has_intersections = true
 				break
 		if has_intersections:
