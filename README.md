@@ -10,4 +10,5 @@ This year (2023) I am attempting to accompany that tutorial with my own tutorial
 
 Here are the links to the written blog posts.
 
-- Parts 0 & 1: https://selinadev.github.io/05-rogueliketutorial-01/
+- Parts 0 & 1, Setup: https://selinadev.github.io/05-rogueliketutorial-01/
+- Part 2, Generic Entity and the Map: https://selinadev.github.io/06-rogueliketutorial-02/
