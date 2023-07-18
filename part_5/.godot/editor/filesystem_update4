@@ -1,0 +1,10 @@
+res://src/Game/game.tscn
+res://assets/definitions/entities/actors/entity_definition_player.tres
+res://assets/definitions/tiles/tile_definition_floor.tres
+res://assets/definitions/tiles/tile_definition_wall.tres
+res://assets/definitions/entities/actors/entity_definition_orc.tres
+res://assets/definitions/entities/actors/entity_definition_troll.tres
+res://src/Game/game.gd
+res://src/Map/map_data.gd
+res://src/Map/dungeon_generator.gd
+res://src/Entities/entity_definition.gd
