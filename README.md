@@ -12,3 +12,6 @@ Here are the links to the written blog posts.
 
 - Parts 0 & 1, Setup: https://selinadev.github.io/05-rogueliketutorial-01/
 - Part 2, Generic Entity and the Map: https://selinadev.github.io/06-rogueliketutorial-02/
+- Part 3, Generating a Dungeon: https://selinadev.github.io/07-rogueliketutorial-03/
+- Part 4, Field of View: https://selinadev.github.io/08-rogueliketutorial-04/
+- Part 5, Placing Enemies and Kicking Them (harmlessly): https://selinadev.github.io/09-rogueliketutorial-05/
