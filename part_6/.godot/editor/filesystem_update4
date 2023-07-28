@@ -1,0 +1,9 @@
+res://src/Game/game.tscn
+res://assets/definitions/tiles/tile_definition_floor.tres
+res://assets/definitions/tiles/tile_definition_wall.tres
+res://assets/definitions/entities/actors/entity_definition_player.tres
+res://assets/definitions/entities/actors/entity_definition_orc.tres
+res://assets/definitions/entities/actors/entity_definition_troll.tres
+res://src/Entities/Actors/Actions/melee_action.gd
+res://src/Entities/Actors/Components/fighter_component.gd
+res://src/Entities/Actors/Components/ComponentDefinitions/fighter_component_definition.gd
