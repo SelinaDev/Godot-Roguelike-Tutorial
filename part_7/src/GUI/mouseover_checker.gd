@@ -8,9 +8,8 @@ var _mouse_tile := Vector2i(-1, -1)
 @onready var map: Map = get_parent()
 
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		var name
 		var mouse_position: Vector2 = get_local_mouse_position()
 		var tile_position: Vector2i = Grid.world_to_grid(mouse_position)
 		if _mouse_tile != tile_position:
@@ -21,8 +20,11 @@ func _input(event: InputEvent) -> void:
 
 func get_names_at_location(grid_position: Vector2i) -> String:
 	var entity_names := ""
+	var map_data: MapData = map.map_data
+	if not map_data.get_tile(grid_position).is_in_view:
+		return entity_names
 	var entities_at_location: Array[Entity] = []
-	for entity in get_parent().map_data.entities:
+	for entity in map_data.entities:
 		if entity.grid_position == grid_position:
 			entities_at_location.append(entity)
 	entities_at_location.sort_custom(func(a, b): return a.z_index > b.z_index)

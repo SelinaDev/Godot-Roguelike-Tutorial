@@ -1,7 +1,5 @@
 extends BaseInputHandler
 
-signal show_message_overlay_requested
-
 const directions = {
 	"move_up": Vector2i.UP,
 	"move_down": Vector2i.DOWN,
@@ -26,7 +24,6 @@ func get_action(player: Entity) -> Action:
 		action = WaitAction.new(player)
 	
 	if Input.is_action_just_pressed("view_history"):
-		show_message_overlay_requested.emit()
 		get_parent().transition_to(InputHandler.InputHandlers.HISTORY_VIEWER)
 	
 	if Input.is_action_just_pressed("quit") or Input.is_action_just_pressed("ui_back"):

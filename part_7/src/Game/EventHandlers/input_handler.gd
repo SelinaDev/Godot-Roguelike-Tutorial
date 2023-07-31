@@ -24,4 +24,7 @@ func get_action(player: Entity) -> Action:
 
 
 func transition_to(input_handler: InputHandlers) -> void:
+	if current_input_handler != null:
+		current_input_handler.exit()
 	current_input_handler = input_handler_nodes[input_handler]
+	current_input_handler.enter()
