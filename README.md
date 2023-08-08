@@ -15,3 +15,5 @@ Here are the links to the written blog posts.
 - Part 3, Generating a Dungeon: https://selinadev.github.io/07-rogueliketutorial-03/
 - Part 4, Field of View: https://selinadev.github.io/08-rogueliketutorial-04/
 - Part 5, Placing Enemies and Kicking Them (harmlessly): https://selinadev.github.io/09-rogueliketutorial-05/
+- Part 6, Doing (and taking) some Damage: https://selinadev.github.io/10-rogueliketutorial-06/
+- Part 7, Creating the Interface: https://selinadev.github.io/11-rogueliketutorial-07/
