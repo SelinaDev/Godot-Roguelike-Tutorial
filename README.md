@@ -17,3 +17,4 @@ Here are the links to the written blog posts.
 - Part 5, Placing Enemies and Kicking Them (harmlessly): https://selinadev.github.io/09-rogueliketutorial-05/
 - Part 6, Doing (and taking) some Damage: https://selinadev.github.io/10-rogueliketutorial-06/
 - Part 7, Creating the Interface: https://selinadev.github.io/11-rogueliketutorial-07/
+- Part 8, Items and Inventory: https://selinadev.github.io/12-rogueliketutorial-08/
