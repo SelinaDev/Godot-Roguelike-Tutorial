@@ -112,8 +112,6 @@ script = ExtResource("5_bvmgb")
 script = ExtResource("9_eusf6")
 
 [node name="Reticle" parent="VBoxContainer/SubViewportContainer/SubViewport/Game/Map" instance=ExtResource("11_n4t22")]
-z_index = 10
-z_as_relative = false
 
 [node name="Camera2D" type="Camera2D" parent="VBoxContainer/SubViewportContainer/SubViewport/Game"]
 zoom = Vector2(2, 2)

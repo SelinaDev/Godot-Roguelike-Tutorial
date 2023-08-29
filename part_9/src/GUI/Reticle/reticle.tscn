@@ -64,6 +64,8 @@ _data = {
 }
 
 [node name="Reticle" type="Node2D"]
+z_index = 10
+z_as_relative = false
 script = ExtResource("1_xrboc")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
