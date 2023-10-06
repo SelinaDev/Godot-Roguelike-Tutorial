@@ -26,7 +26,7 @@ func move(move_offset: Vector2i) -> void:
 
 
 func is_blocking_movement() -> bool:
-	return _definition.is_blocking_movment
+	return _definition.is_blocking_movement
 
 
 func get_entity_name() -> String:
