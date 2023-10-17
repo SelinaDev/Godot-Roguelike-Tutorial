@@ -43,7 +43,6 @@ func get_action(player: Entity) -> Action:
 	if Input.is_action_just_pressed("look"):
 		await get_grid_position(player, 0)
 	
-	
 	if Input.is_action_just_pressed("quit") or Input.is_action_just_pressed("ui_back"):
 		action = EscapeAction.new(player)
 	
@@ -66,12 +65,18 @@ func activate_item(player: Entity) -> Action:
 
 
 func get_item(window_title: String, inventory: InventoryComponent) -> Entity:
+	if inventory.items.is_empty():
+		await get_tree().physics_frame
+		MessageLog.send_message("No items in inventory.", GameColors.IMPOSSIBLE)
+		return null
 	var inventory_menu: InventoryMenu = inventory_menu_scene.instantiate()
 	add_child(inventory_menu)
 	inventory_menu.build(window_title, inventory)
 	get_parent().transition_to(InputHandler.InputHandlers.DUMMY)
 	var selected_item: Entity = await inventory_menu.item_selected
-	if selected_item and selected_item.consumable_component and selected_item.consumable_component.get_targeting_radius() == -1:
+	var has_item: bool = selected_item != null
+	var needs_targeting: bool = has_item and selected_item.consumable_component and selected_item.consumable_component.get_targeting_radius() != -1
+	if not has_item or not needs_targeting:
 		await get_tree().physics_frame
 		get_parent().call_deferred("transition_to", InputHandler.InputHandlers.MAIN_GAME)
 	return selected_item

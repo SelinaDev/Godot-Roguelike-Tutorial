@@ -33,6 +33,6 @@ func get_save_data() -> Dictionary:
 func restore(save_data: Dictionary) -> void:
 	capacity = save_data["capacity"]
 	for item_data in save_data["items"]:
-		var item: Entity = entity.new(null, Vector2i(-1, -1), "")
+		var item: Entity = Entity.new(null, Vector2i(-1, -1), "")
 		item.restore(item_data)
 		items.append(item)
