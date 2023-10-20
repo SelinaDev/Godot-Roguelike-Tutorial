@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="EntityDefinition" load_steps=9 format=3 uid="uid://nonyedj0ufmd"]
+
+[ext_resource type="Script" path="res://src/Entities/entity_definition.gd" id="1_jis8c"]
+[ext_resource type="Texture2D" uid="uid://cxqlsyurt7g4r" path="res://assets/resources/default_death_texture.tres" id="1_kiijm"]
+[ext_resource type="Script" path="res://src/Entities/Actors/Components/ComponentDefinitions/fighter_component_definition.gd" id="1_tol5g"]
+[ext_resource type="Texture2D" uid="uid://h7i8uiwlysq2" path="res://assets/images/kenney_1-bit-pack/monochrome_packed.png" id="2_hfb26"]
+[ext_resource type="Script" path="res://src/Entities/Actors/Components/ComponentDefinitions/level_component_definition.gd" id="3_x0r04"]
+
+[sub_resource type="Resource" id="Resource_uw3og"]
+script = ExtResource("1_tol5g")
+max_hp = 30
+power = 5
+defense = 2
+death_texture = ExtResource("1_kiijm")
+death_color = Color(0.545098, 0, 0, 1)
+
+[sub_resource type="Resource" id="Resource_vwedd"]
+script = ExtResource("3_x0r04")
+level_up_base = 200
+level_up_factor = 150
+xp_given = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50h3g"]
+atlas = ExtResource("2_hfb26")
+region = Rect2(432, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_jis8c")
+name = "Player"
+texture = SubResource("AtlasTexture_50h3g")
+color = Color(1, 1, 1, 1)
+is_blocking_movment = true
+type = 2
+fighter_definition = SubResource("Resource_uw3og")
+ai_type = 1
+inventory_capacity = 26
+level_info = SubResource("Resource_vwedd")

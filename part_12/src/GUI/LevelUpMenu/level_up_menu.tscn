@@ -1,0 +1,174 @@
+[gd_scene load_steps=16 format=3 uid="uid://b7ysfvcjj81a8"]
+
+[ext_resource type="Script" path="res://src/GUI/LevelUpMenu/level_up_menu.gd" id="1_rhmq5"]
+[ext_resource type="Texture2D" uid="uid://h7i8uiwlysq2" path="res://assets/images/kenney_1-bit-pack/monochrome_packed.png" id="1_vci68"]
+[ext_resource type="FontFile" uid="uid://bk0fq2awle8d5" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="2_x0m25"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7j4i"]
+atlas = ExtResource("1_vci68")
+region = Rect2(768, 336, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gur0a"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+texture = SubResource("AtlasTexture_q7j4i")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_w8cn8"]
+font = ExtResource("2_x0m25")
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_spck6"]
+color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mg1cb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa2i8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="InputEventKey" id="InputEventKey_ecuwk"]
+device = -1
+key_label = 65
+unicode = 97
+
+[sub_resource type="Shortcut" id="Shortcut_cdok0"]
+events = [SubResource("InputEventKey_ecuwk")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_4g4xy"]
+device = -1
+key_label = 66
+unicode = 98
+
+[sub_resource type="Shortcut" id="Shortcut_8dbk8"]
+events = [SubResource("InputEventKey_4g4xy")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_2uj4h"]
+device = -1
+key_label = 67
+unicode = 99
+
+[sub_resource type="Shortcut" id="Shortcut_842ym"]
+events = [SubResource("InputEventKey_2uj4h")]
+
+[node name="LevelUpMenu" type="CanvasLayer"]
+script = ExtResource("1_rhmq5")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gur0a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level Up"
+label_settings = SubResource("LabelSettings_w8cn8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Congratulations! You level up!
+Select an attribute to increase."
+label_settings = SubResource("LabelSettings_w8cn8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxLine_spck6")
+
+[node name="HealthUpgradeButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_x0m25")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mg1cb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xa2i8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xa2i8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mg1cb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xa2i8")
+action_mode = 0
+shortcut = SubResource("Shortcut_cdok0")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+text = "a"
+alignment = 0
+
+[node name="PowerUpgradeButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_x0m25")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mg1cb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xa2i8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xa2i8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mg1cb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xa2i8")
+action_mode = 0
+shortcut = SubResource("Shortcut_8dbk8")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+text = "b"
+alignment = 0
+
+[node name="DefenseUpgradeButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_x0m25")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mg1cb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xa2i8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xa2i8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mg1cb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xa2i8")
+action_mode = 0
+shortcut = SubResource("Shortcut_842ym")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+text = "c"
+alignment = 0
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/HealthUpgradeButton" to="." method="_on_health_upgrade_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/PowerUpgradeButton" to="." method="_on_power_upgrade_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/DefenseUpgradeButton" to="." method="_on_defense_upgrade_button_pressed"]
