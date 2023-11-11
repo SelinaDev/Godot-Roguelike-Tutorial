@@ -24,8 +24,7 @@ func _physics_process(_delta: float) -> void:
 	if action:
 		var previous_player_position: Vector2i = player.grid_position
 		action.perform(self, player)
-		if player.grid_position != previous_player_position:
-			map.update_fov(player.grid_position)
+		map.update_fov(player.grid_position)
 
 
 func get_map_data() -> MapData:

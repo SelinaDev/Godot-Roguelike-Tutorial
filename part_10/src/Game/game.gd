@@ -47,9 +47,8 @@ func _physics_process(_delta: float) -> void:
 	if action:
 		var previous_player_position: Vector2i = player.grid_position
 		if action.perform():
-			if player.grid_position != previous_player_position:
-				map.update_fov(player.grid_position)
 			_handle_enemy_turns()
+			map.update_fov(player.grid_position)
 
 
 func _handle_enemy_turns() -> void:

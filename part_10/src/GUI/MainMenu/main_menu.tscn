@@ -24,6 +24,8 @@ border_color = Color(1, 1, 1, 1)
 [sub_resource type="InputEventKey" id="InputEventKey_hh80l"]
 device = -1
 keycode = 78
+physical_keycode = 78
+key_label = 78
 unicode = 110
 
 [sub_resource type="Shortcut" id="Shortcut_ky4hl"]
