@@ -123,11 +123,11 @@ func load_game() -> bool:
 	var file = FileAccess.open("user://save_game.dat", FileAccess.READ)
 	var retrieved_hash: String = file.get_line()
 	var save_string: String = file.get_line()
-	var save_data: Dictionary = JSON.parse_string(save_string)
 	var calculated_hash: String = save_string.sha256_text()
 	var valid_hash: bool = retrieved_hash == calculated_hash
 	if not valid_hash:
 		return false
+	var save_data: Dictionary = JSON.parse_string(save_string)
 	restore(save_data)
 	return true
 

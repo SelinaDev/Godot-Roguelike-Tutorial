@@ -1,19 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699701429
+::res://::1699794268
 icon.svg::CompressedTexture2D::4590464390092756406::1687789428::1690562114::1::::<><>::
 ::res://assets/::1697453715
 ::res://assets/definitions/::1689747214
 ::res://assets/definitions/entities/::1690883830
 ::res://assets/definitions/entities/actors/::1699288918
-entity_definition_orc.tres::Resource/EntityDefinition::2820605832680719856::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/fighter_component_definition.gd<>uid://cxqlsyurt7g4r::::res://assets/resources/default_death_texture.tres<>res://src/Entities/entity_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
+entity_definition_orc.tres::Resource/Resource::2820605832680719856::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/fighter_component_definition.gd<>uid://cxqlsyurt7g4r
 entity_definition_player.tres::Resource/EntityDefinition::942188650981872703::1699288918::0::1::::<><>::res://src/Entities/entity_definition.gd<>uid://cxqlsyurt7g4r::::res://assets/resources/default_death_texture.tres<>res://src/Entities/Actors/Components/ComponentDefinitions/fighter_component_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
-entity_definition_troll.tres::Resource/EntityDefinition::7450246412546586111::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/fighter_component_definition.gd<>uid://cxqlsyurt7g4r::::res://assets/resources/default_death_texture.tres<>res://src/Entities/entity_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
+entity_definition_troll.tres::Resource/Resource::7450246412546586111::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/fighter_component_definition.gd<>uid://cxqlsyurt7g4r
 ::res://assets/definitions/entities/components/::1689772966
 ::res://assets/definitions/entities/items/::1697463047
-confusion_scroll_definition.tres::Resource/EntityDefinition::1286561314778927483::1697463047::0::1::::<><>::res://src/Entities/entity_definition.gd<>res://src/Entities/Actors/Components/ComponentDefinitions/confusion_consumable_component_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
-fireball_scroll_definition.tres::Resource/EntityDefinition::8267563959111039259::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/fireball_damage_consumable_component_definition.gd<>res://src/Entities/entity_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
-health_potion_definition.tres::Resource/EntityDefinition::2964107659722300910::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/healing_consumable_component_definition.gd<>res://src/Entities/entity_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
-lightning_scroll_definition.tres::Resource/EntityDefinition::2460036121782313319::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/lightning_damage_consumable_component_definition.gd<>res://src/Entities/entity_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
+confusion_scroll_definition.tres::Resource/Resource::1286561314778927483::1697463047::0::1::::<><>::res://src/Entities/entity_definition.gd<>res://src/Entities/Actors/Components/ComponentDefinitions/confusion_consumable_component_definition.gd<>uid://h7i8uiwlysq2
+fireball_scroll_definition.tres::Resource/Resource::8267563959111039259::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/fireball_damage_consumable_component_definition.gd<>res://src/Entities/entity_definition.gd<>uid://h7i8uiwlysq2
+health_potion_definition.tres::Resource/Resource::2964107659722300910::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/healing_consumable_component_definition.gd<>res://src/Entities/entity_definition.gd<>uid://h7i8uiwlysq2
+lightning_scroll_definition.tres::Resource/Resource::2460036121782313319::1697463047::0::1::::<><>::res://src/Entities/Actors/Components/ComponentDefinitions/lightning_damage_consumable_component_definition.gd<>res://src/Entities/entity_definition.gd<>uid://h7i8uiwlysq2
 ::res://assets/definitions/tiles/::1699288918
 tile_definition_floor.tres::Resource/TileDefinition::1289269251496478990::1699288918::0::1::::<><>::res://src/Map/tile_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
 tile_definition_wall.tres::Resource/TileDefinition::4701726637736593734::1699288918::0::1::::<><>::res://src/Map/tile_definition.gd<>uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
@@ -39,7 +39,7 @@ menu_background.png::CompressedTexture2D::8375699802338461386::1696265889::16972
 License.txt::TextFile::-1::1687789428::0::1::::<><>::
 monochrome_packed.png::CompressedTexture2D::557927724577814707::1687789428::1690562114::1::::<><>::
 ::res://assets/resources/::1699288918
-default_death_texture.tres::AtlasTexture::6420916138592172627::1690265892::0::1::::<><>::uid://h7i8uiwlysq2::::res://assets/images/kenney_1-bit-pack/monochrome_packed.png
+default_death_texture.tres::AtlasTexture::6420916138592172627::1690265892::0::1::::<><>::uid://h7i8uiwlysq2
 message_label_settings.tres::LabelSettings::8734179906142651696::1699288918::0::1::::<><>::uid://bk0fq2awle8d5::::res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf
 ::res://src/::1690265892
 ::res://src/Entities/::1697466381
@@ -103,8 +103,8 @@ main_menu.tscn::PackedScene::6934038744418494594::1699699575::0::1::::<><>::uid:
 ::res://src/GUI/Reticle/::1697466619
 reticle.gd::GDScript::-1::1692714580::0::1::::Reticle<>Node2D<>::
 reticle.tscn::PackedScene::9189467814095418381::1697466619::0::1::::<><>::res://src/GUI/Reticle/reticle.gd
-::res://src/Map/::1697466360
-dungeon_generator.gd::GDScript::-1::1697455337::0::1::::DungeonGenerator<>Node<>::
+::res://src/Map/::1699722777
+dungeon_generator.gd::GDScript::-1::1699722777::0::1::::DungeonGenerator<>Node<>::
 field_of_view.gd::GDScript::-1::1689747214::0::1::::FieldOfView<>Node<>::
 game_map.gd::GDScript::-1::1689747206::0::1::::GameMap<>Node2D<>::
 map.gd::GDScript::-1::1697465405::0::1::::Map<>Node2D<>::
