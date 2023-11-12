@@ -22,3 +22,4 @@ Here are the links to the written blog posts.
 - Part 7, Creating the Interface: https://selinadev.github.io/11-rogueliketutorial-07/
 - Part 8, Items and Inventory: https://selinadev.github.io/12-rogueliketutorial-08/
 - Part 9, Ranged Scrolls and Targeting: https://selinadev.github.io/13-rogueliketutorial-09/
+- Part 10, Saving and Loading: https://selinadev.github.io/14-rogueliketutorial-10/
