@@ -77,9 +77,9 @@ func move(move_offset: Vector2i) -> void:
 	visible = map_data.get_tile(grid_position).is_in_view
 
 
-func distance(other_position: Vector2i) -> float:
+func distance(other_position: Vector2i) -> int:
 	var relative: Vector2i = other_position - grid_position
-	return relative.length()
+	return maxi(relative.x, relative.y)
 
 
 func is_blocking_movement() -> bool:
