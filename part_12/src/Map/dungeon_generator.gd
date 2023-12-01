@@ -161,8 +161,8 @@ func _pick_weighted(weighted_chances: Dictionary) -> String:
 	for key in weighted_chances:
 		keys.append(key)
 		var chance: int = weighted_chances[key]
-		cumulative_chances.append(chance)
 		sum += chance
+		cumulative_chances.append(sum)
 	var random_chance: int = _rng.randi_range(0, sum - 1)
 	var selection: String
 	
