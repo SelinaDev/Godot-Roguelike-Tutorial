@@ -16,7 +16,7 @@ func _init(turns_remaining: int) -> void:
 
 func perform() -> void:
 	if turns_remaining <= 0:
-		MessageLog.send_message("The %s is no longer confused.", Color.WHITE)
+		MessageLog.send_message("The %s is no longer confused." % entity.get_entity_name(), Color.WHITE)
 		entity.ai_component = previous_ai
 		queue_free()
 	else:
