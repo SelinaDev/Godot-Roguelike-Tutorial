@@ -59,7 +59,7 @@ func generate_dungeon(player: Entity, current_floor: int) -> MapData:
 		var y: int = _rng.randi_range(0, dungeon.height - room_height - 1)
 		
 		var new_room := Rect2i(x, y, room_width, room_height)
-		
+	
 		var has_intersections := false
 		for room in rooms:
 			if room.intersects(new_room):

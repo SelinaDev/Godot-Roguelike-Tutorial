@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EntityDefinition" load_steps=6 format=3 uid="uid://ckwdkjwfq53rp"]
+
+[ext_resource type="Script" path="res://src/Entities/Actors/Components/ComponentDefinitions/equippable_component_definition.gd" id="1_4lksx"]
+[ext_resource type="Script" path="res://src/Entities/entity_definition.gd" id="1_a8epg"]
+[ext_resource type="Texture2D" uid="uid://h7i8uiwlysq2" path="res://assets/images/kenney_1-bit-pack/monochrome_packed.png" id="3_m2yff"]
+
+[sub_resource type="Resource" id="Resource_pyqci"]
+script = ExtResource("1_4lksx")
+equipment_type = 1
+power_bonus = 0
+defense_bonus = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy1r7"]
+atlas = ExtResource("3_m2yff")
+
+[resource]
+script = ExtResource("1_a8epg")
+name = "Chain Mail"
+texture = SubResource("AtlasTexture_fy1r7")
+color = Color(0.498039, 0.498039, 0.498039, 1)
+is_blocking_movment = false
+type = 1
+ai_type = 0
+item_definition = SubResource("Resource_pyqci")
+inventory_capacity = 0

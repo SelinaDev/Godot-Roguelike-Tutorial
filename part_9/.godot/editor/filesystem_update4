@@ -9,4 +9,6 @@ res://assets/definitions/entities/items/health_potion_definition.tres
 res://assets/definitions/entities/items/lightning_scroll_definition.tres
 res://assets/definitions/entities/items/confusion_scroll_definition.tres
 res://assets/definitions/entities/items/fireball_scroll_definition.tres
-res://src/Game/EventHandlers/input_handler.gd
+res://src/GUI/InventorMenu/inventory_menu.tscn
+res://src/GUI/InventorMenu/inventory_menu_item.tscn
+res://src/GUI/Reticle/reticle.tscn
