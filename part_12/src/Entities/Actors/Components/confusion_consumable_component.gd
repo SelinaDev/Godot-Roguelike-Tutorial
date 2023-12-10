@@ -11,7 +11,7 @@ func _init(definition: ConfusionConsumableComponentDefinition) -> void:
 func activate(action: ItemAction) -> bool:
 	var consumer: Entity = action.entity
 	var target: Entity = action.get_target_actor()
-	var map_data: MapData = consumer.get_map_data()
+	var map_data: MapData = consumer.map_data
 	
 	if not map_data.get_tile(action.target_position).is_in_view:
 		MessageLog.send_message("You cannot target an area that you cannot see.", GameColors.IMPOSSIBLE)

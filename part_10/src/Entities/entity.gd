@@ -134,7 +134,7 @@ func restore(save_data: Dictionary) -> void:
 		fighter_component.restore(save_data["fighter_component"])
 	if ai_component and save_data.has("ai_component"):
 		var ai_data: Dictionary = save_data["ai_component"]
-		if ai_data["type"] == "ConfusedEnemyAIComponent":
+		if ai_data["type"] == "ConfusedEnemyAI":
 			var confused_enemy_ai := ConfusedEnemyAIComponent.new(ai_data["turns_remaining"])
 			add_child(confused_enemy_ai)
 	if inventory_component and save_data.has("inventory_component"):

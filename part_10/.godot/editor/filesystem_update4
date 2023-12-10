@@ -10,3 +10,4 @@ res://src/Game/game_manager.tscn
 res://src/Game/game.tscn
 res://src/Entities/Actors/Components/confusion_consumable_component.gd
 res://src/Entities/Actors/Components/fireball_damage_consumable_component.gd
+res://src/Entities/entity.gd
