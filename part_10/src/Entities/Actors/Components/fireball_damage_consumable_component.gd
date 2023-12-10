@@ -37,6 +37,5 @@ func activate(action: ItemAction) -> bool:
 	consume(action.entity)
 	return true
 
-
 func get_targeting_radius() -> int:
 	return radius

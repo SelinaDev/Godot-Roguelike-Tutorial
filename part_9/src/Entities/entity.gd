@@ -66,7 +66,7 @@ func move(move_offset: Vector2i) -> void:
 
 func distance(other_position: Vector2i) -> int:
 	var relative: Vector2i = other_position - grid_position
-	return maxi(relative.x, relative.y)
+	return maxi(abs(relative.x), abs(relative.y))
 
 
 func is_blocking_movement() -> bool:
