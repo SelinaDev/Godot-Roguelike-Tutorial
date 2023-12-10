@@ -11,8 +11,9 @@ func _init(definition: FireballDamageConsumableComponentDefinition):
 
 
 func activate(action: ItemAction) -> bool:
+	var consumer: Entity = action.entity
 	var target_position: Vector2i = action.target_position
-	var map_data: MapData = get_map_data()
+	var map_data: MapData = consumer.map_data
 	
 	if not map_data.get_tile(target_position).is_in_view:
 		MessageLog.send_message("You cannot target an area that you cannot see.", GameColors.IMPOSSIBLE)

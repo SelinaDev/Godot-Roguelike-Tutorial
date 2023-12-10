@@ -14,7 +14,7 @@ func activate(action: ItemAction) -> bool:
 	var consumer: Entity = action.entity
 	var target: Entity = null
 	var closest_distance: float = maximum_range + 1
-	var map_data: MapData = get_map_data()
+	var map_data: MapData = consumer.map_data
 	
 	for actor in map_data.get_actors():
 		if actor != consumer and map_data.get_tile(actor.grid_position).is_in_view:
