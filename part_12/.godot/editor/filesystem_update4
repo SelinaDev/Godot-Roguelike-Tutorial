@@ -3,4 +3,3 @@ res://assets/definitions/tiles/tile_definition_floor.tres
 res://assets/definitions/tiles/tile_definition_wall.tres
 res://assets/definitions/tiles/tile_definition_down_stairs.tres
 res://assets/resources/message_label_settings.tres
-res://src/Map/dungeon_generator.gd

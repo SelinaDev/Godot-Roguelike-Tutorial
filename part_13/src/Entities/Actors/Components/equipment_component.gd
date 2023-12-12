@@ -1,6 +1,8 @@
 class_name EquipmentComponent
 extends Component
 
+signal equipment_changed
+
 var slots := {}
 
 func get_defense_bonus() -> int:
@@ -42,6 +44,8 @@ func equip_to_slot(slot: EquippableComponent.EquipmentType, item: Entity, add_me
 	slots[slot] = item
 	if add_message:
 		equip_message(item.get_entity_name())
+	
+	equipment_changed.emit()
 
 
 func unequip_from_slot(slot: EquippableComponent.EquipmentType, add_message: bool) -> void:
@@ -51,6 +55,8 @@ func unequip_from_slot(slot: EquippableComponent.EquipmentType, add_message: boo
 		unequip_message(current_item.get_entity_name())
 	
 	slots.erase(slot)
+	
+	equipment_changed.emit()
 
 
 func toggle_equip(equippable_item: Entity, add_message: bool = true) -> void:
