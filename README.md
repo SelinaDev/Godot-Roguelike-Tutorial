@@ -24,3 +24,4 @@ Here are the links to the written blog posts.
 - Part 9, Ranged Scrolls and Targeting: https://selinadev.github.io/13-rogueliketutorial-09/
 - Part 10, Saving and Loading: https://selinadev.github.io/14-rogueliketutorial-10/
 - Part 11, Delving into the Dungeon: https://selinadev.github.io/15-rogueliketutorial-11/
+- Part 12, Increasing Difficulty: https://selinadev.github.io/16-rogueliketutorial-12/
