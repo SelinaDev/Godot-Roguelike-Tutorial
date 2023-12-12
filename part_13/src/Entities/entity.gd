@@ -130,6 +130,7 @@ func _handle_consumable(consumable_definition: ConsumableComponentDefinition) ->
 	
 	if consumable_component:
 		add_child(consumable_component)
+	consumable_component.entity = self
 
 
 func get_save_data() -> Dictionary:
