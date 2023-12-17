@@ -51,7 +51,7 @@ func get_action(player: Entity) -> Action:
 
 
 func activate_item(player: Entity) -> Action:
-	var selected_item: Entity = await get_item("Select an item to use", player.inventory_component)
+	var selected_item: Entity = await get_item("Select an item to use", player.inventory_component, true)
 	if selected_item == null:
 		return null
 	var target_radius: int = -1
@@ -65,13 +65,13 @@ func activate_item(player: Entity) -> Action:
 	return ItemAction.new(player, selected_item, target_position)
 
 
-func get_item(window_title: String, inventory: InventoryComponent) -> Entity:
+func get_item(window_title: String, inventory: InventoryComponent, evaluate_for_next_step: bool = false) -> Entity:
 	var inventory_menu: InventoryMenu = inventory_menu_scene.instantiate()
 	add_child(inventory_menu)
 	inventory_menu.build(window_title, inventory)
 	get_parent().transition_to(InputHandler.InputHandlers.DUMMY)
 	var selected_item: Entity = await inventory_menu.item_selected
-	if selected_item and selected_item.consumable_component and selected_item.consumable_component.get_targeting_radius() == -1:
+	if not evaluate_for_next_step or (selected_item and selected_item.consumable_component and selected_item.consumable_component.get_targeting_radius() == -1):
 		await get_tree().physics_frame
 		get_parent().call_deferred("transition_to", InputHandler.InputHandlers.MAIN_GAME)
 	return selected_item
