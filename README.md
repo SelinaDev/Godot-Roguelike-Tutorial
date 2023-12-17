@@ -4,10 +4,10 @@ _Yet Another Roguelike Tutorial in Godot_
 
 Every year the subreddit _r/roguelikedev_ does the "_Complete Roguelike Tutorial_", an event where participants go through a tutorial together over the course of several weeks. The tutorial in question is the one for python and the tcod library, found at http://rogueliketutorials.com/
 
-This year (2023) I am attempting to accompany that tutorial with my own tutorial series for Godot 4. This is an ongoing endeavour. By now I have fallen behind the reddit event. That event has concluded by now, but I will nonetheless try to this project (albeit at a slower pace).
+This year (2023) I am attempting to accompany that tutorial with my own tutorial series for Godot 4. I finished the tutorial series mid December.
 
 
- You can find the code for all the parts I have completed here.
+You can find the code for all parts here. This code should work with Godot 4.1.
 
 ## Tutorials
 
@@ -25,3 +25,4 @@ Here are the links to the written blog posts.
 - Part 10, Saving and Loading: https://selinadev.github.io/14-rogueliketutorial-10/
 - Part 11, Delving into the Dungeon: https://selinadev.github.io/15-rogueliketutorial-11/
 - Part 12, Increasing Difficulty: https://selinadev.github.io/16-rogueliketutorial-12/
+- Part 13, Gearing Up: https://selinadev.github.io/17-rogueliketutorial-13/
