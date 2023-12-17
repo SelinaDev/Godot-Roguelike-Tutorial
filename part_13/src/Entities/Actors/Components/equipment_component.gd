@@ -29,30 +29,22 @@ func is_item_equipped(item: Entity) -> bool:
 	return item in slots.values()
 
 
-func unequip_message(item_name: String) -> void:
-	MessageLog.send_message("You remove the %s." % item_name, Color.WHITE)
-
-
-func equip_message(item_name: String) -> void:
-	MessageLog.send_message("You equip the %s." % item_name, Color.WHITE)
-
-
-func equip_to_slot(slot: EquippableComponent.EquipmentType, item: Entity, add_message: bool) -> void:
+func _equip_to_slot(slot: EquippableComponent.EquipmentType, item: Entity, add_message: bool) -> void:
 	var current_item = slots.get(slot)
 	if current_item:
-		unequip_from_slot(slot, add_message)
+		_unequip_from_slot(slot, add_message)
 	slots[slot] = item
 	if add_message:
-		equip_message(item.get_entity_name())
+		MessageLog.send_message("You equip the %s." % item.get_entity_name(), Color.WHITE)
 	
 	equipment_changed.emit()
 
 
-func unequip_from_slot(slot: EquippableComponent.EquipmentType, add_message: bool) -> void:
+func _unequip_from_slot(slot: EquippableComponent.EquipmentType, add_message: bool) -> void:
 	var current_item = slots.get(slot)
 	
 	if add_message:
-		unequip_message(current_item.get_entity_name())
+		MessageLog.send_message("You remove the %s." % current_item.get_entity_name(), Color.WHITE)
 	
 	slots.erase(slot)
 	
@@ -65,9 +57,9 @@ func toggle_equip(equippable_item: Entity, add_message: bool = true) -> void:
 	var slot: EquippableComponent.EquipmentType = equippable_item.equippable_component.equipment_type
 	
 	if slots.get(slot) == equippable_item:
-		unequip_from_slot(slot, add_message)
+		_unequip_from_slot(slot, add_message)
 	else:
-		equip_to_slot(slot, equippable_item, add_message)
+		_equip_to_slot(slot, equippable_item, add_message)
 
 
 func get_save_data() -> Dictionary:
@@ -87,3 +79,4 @@ func restore(save_data: Dictionary) -> void:
 		if equipped_indices.any(func(index): return int(index) == i):
 			var item: Entity = inventory.items[i]
 			toggle_equip(item, false)
+

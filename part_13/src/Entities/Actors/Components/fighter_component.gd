@@ -96,13 +96,13 @@ func get_save_data() -> Dictionary:
 	return {
 		"max_hp": max_hp,
 		"hp": hp,
-		"power": power,
-		"defense": defense
+		"power": base_power,
+		"defense": base_defense
 	}
 
 
 func restore(save_data: Dictionary) -> void:
 	max_hp = save_data["max_hp"]
 	hp = save_data["hp"]
-	power = save_data["power"]
-	defense = save_data["defense"]
+	base_power = save_data["power"]
+	base_defense = save_data["defense"]
