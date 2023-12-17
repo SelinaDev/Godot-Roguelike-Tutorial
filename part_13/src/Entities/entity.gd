@@ -88,6 +88,7 @@ func set_entity_type(key: String) -> void:
 	if entity_definition.has_equipment:
 		equipment_component = EquipmentComponent.new()
 		add_child(equipment_component)
+		equipment_component.entity = self
 
 
 func move(move_offset: Vector2i) -> void:
@@ -145,6 +146,8 @@ func get_save_data() -> Dictionary:
 		save_data["ai_component"] = ai_component.get_save_data()
 	if inventory_component:
 		save_data["inventory_component"] = inventory_component.get_save_data()
+	if equipment_component:
+		save_data["equipment_component"] = equipment_component.get_save_data()
 	if level_component:
 		save_data["level_component"] = level_component.get_save_data()
 	return save_data
@@ -162,5 +165,7 @@ func restore(save_data: Dictionary) -> void:
 			add_child(confused_enemy_ai)
 	if inventory_component and save_data.has("inventory_component"):
 		inventory_component.restore(save_data["inventory_component"])
+	if equipment_component and save_data.has("equipment_component"):
+		equipment_component.restore(save_data["equipment_component"])
 	if level_component and save_data.has("level_component"):
 		level_component.restore(save_data["level_component"])

@@ -68,3 +68,22 @@ func toggle_equip(equippable_item: Entity, add_message: bool = true) -> void:
 		unequip_from_slot(slot, add_message)
 	else:
 		equip_to_slot(slot, equippable_item, add_message)
+
+
+func get_save_data() -> Dictionary:
+	var equipped_indices := []
+	var inventory: InventoryComponent = entity.inventory_component
+	for i in inventory.items.size():
+		var item: Entity = inventory.items[i]
+		if is_item_equipped(item):
+			equipped_indices.append(i)
+	return {"equipped_indices": equipped_indices}
+
+
+func restore(save_data: Dictionary) -> void:
+	var equipped_indices: Array = save_data["equipped_indices"]
+	var inventory: InventoryComponent = entity.inventory_component
+	for i in inventory.items.size():
+		if equipped_indices.any(func(index): return int(index) == i):
+			var item: Entity = inventory.items[i]
+			toggle_equip(item, false)
