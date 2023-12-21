@@ -18,7 +18,10 @@ func perform() -> void:
 		path.pop_front()
 	
 	if not path.is_empty():
-		var destination := Vector2i(path.pop_front())
+		var destination := Vector2i(path[0])
+		if get_map_data().get_blocking_entity_at_location(destination):
+			return WaitAction.new(entity).perform()
+		Vector2i(path.pop_front())
 		var move_offset: Vector2i = destination - entity.grid_position
 		return MovementAction.new(entity, move_offset.x, move_offset.y).perform()
 	
