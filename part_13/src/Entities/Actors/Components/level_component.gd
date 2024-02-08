@@ -41,6 +41,7 @@ func add_xp(xp: int) -> void:
 func increase_level() -> void:
 	current_xp -= get_experience_to_next_level()
 	current_level += 1
+	leveled_up.emit()
 
 
 func increase_max_hp(amount: int = 20) -> void:
