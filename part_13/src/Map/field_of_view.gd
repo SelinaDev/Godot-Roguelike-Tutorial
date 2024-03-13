@@ -48,7 +48,7 @@ func _cast_light(map_data: MapData, x: int, y: int, radius: int, row: int, start
 				break
 			var sax: int = dx * xx + dy * xy
 			var say: int = dx * yx + dy * yy
-			if ((say < 0 and absi(sax) > x) or (say < 0 and absi(say) > y)):
+			if ((sax < 0 and absi(sax) > x) or (say < 0 and absi(say) > y)):
 				continue
 			var ax: int = x + sax
 			var ay: int = y + say
