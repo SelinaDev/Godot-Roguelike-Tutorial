@@ -41,6 +41,7 @@ func add_xp(xp: int) -> void:
 func increase_level() -> void:
 	current_xp -= get_experience_to_next_level()
 	current_level += 1
+	xp_changed.emit(current_xp, get_experience_to_next_level())
 	leveled_up.emit()
 
 
