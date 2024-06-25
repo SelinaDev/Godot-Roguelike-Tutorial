@@ -7,7 +7,11 @@ Every year the subreddit _r/roguelikedev_ does the "_Complete Roguelike Tutorial
 This year (2023) I am attempting to accompany that tutorial with my own tutorial series for Godot 4. I finished the tutorial series mid December.
 
 
-You can find the code for all parts here. This code should work with Godot 4.1.
+You can find the code for all parts here. This code should work with Godot 4.1 (and above).
+
+# C# Version of the Code
+
+[plyr0](https://github.com/plyr0) has made an effort to translate the code to C#, which you can find here: https://github.com/plyr0/Godot-Roguelike-Tutorial-CSharp
 
 ## Tutorials
 
